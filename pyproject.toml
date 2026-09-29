@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-rewind"
+version = "0.1.0"
+description = "Time-travel debugger for AI agents: rewind any run, replay it exactly, and find the step where it was really lost."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+claude = ["anthropic>=1.0"]
+
+[project.scripts]
+rewind = "rewind.__main__:main"
+
+[tool.setuptools]
+packages = ["rewind"]
